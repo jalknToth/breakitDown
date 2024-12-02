@@ -1,17 +1,13 @@
-# Set colors for output
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# Ensure script stops on any error
 set -e
 
-# Check for required commands and install virtualenv if needed
 command -v python3 >/dev/null 2>&1 || { echo >&2 "Python3 is required but not installed.  Aborting."; exit 1; }
 command -v virtualenv >/dev/null 2>&1 || { python3 -m pip install --user virtualenv; }
 command -v mysql >/dev/null 2>&1 || { echo >&2 "MySQL is required but not installed.  Aborting."; exit 1; }
 
-# Project Structure Creation Function
 createStructure() {
     echo -e "${YELLOW}🏗️ Creating Project Directory Structure${NC}"
 
