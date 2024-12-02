@@ -15,13 +15,10 @@ command -v mysql >/dev/null 2>&1 || { echo >&2 "MySQL is required but not instal
 createStructure() {
     echo -e "${YELLOW}🏗️ Creating Project Directory Structure${NC}"
 
-    # Create subdirectories
     mkdir -p {src,templates,static,uploads} || { echo "Error creating directories"; exit 1; }
 
-    # Create necessary files
     touch .env app.py .gitignore
 
-    # Create app structure files
     touch src/PDFcontroller.py
     touch src/PDFmodel.py
     touch src/db.py
@@ -40,7 +37,6 @@ logs/
 EOL
 }
 
-# Environment File Creation
 creatEnv() {
     echo -e "${YELLOW}🔐 Generating .env file${NC}"
     cat > .env << EOL
@@ -65,7 +61,6 @@ LOG_FILE=./logs/app.log
 EOL
 }
 
-# Main Application File Creation
 createApp() {
     echo -e "${YELLOW}🚀 Creating main application file${NC}"
     cat > app.py << EOL
