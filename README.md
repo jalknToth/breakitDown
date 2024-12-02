@@ -2,30 +2,17 @@
 
 Una aplicación web simple en Python para analizar PDF files.
 
-## Screenshots
-
-<table>
-  <tr>
-    <td><img src="" alt="" width="200px"></td>
-    <td><img src="" alt="" width="200px"></td>
-    <td><img src="" alt="" width="200px"></td>
-  </tr>
-</table>
-
 ## Estructura del proyecto
 
 ```
-breakDown/
+breakitDown/
 ├── .env
 ├── .gitignore
 ├── app.py
 ├── src
-│   ├── controllers
-│   │   └── PDFcontroller.py
+│   ├── PDFcontroller.py
 │   ├── database.py
-│   ├── models
-│   │   └── PDFmodel.py
-│   └── uploads
+│   └── PDFmodel.py
 ├── static
 └── templates
     ├── index.html
