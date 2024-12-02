@@ -37,7 +37,6 @@ breakitDown/
    - Create the project directory structure.
    - Generate the `.env` file.  **Important:**  Edit the `.env` file with your MySQL credentials.
    - Create a virtual environment and install the required dependencies.
-   - Download necessary NLTK resources.
    - Create the database and tables in MySQL.
    - Set appropriate file permissions.
 
