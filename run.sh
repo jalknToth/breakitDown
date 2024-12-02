@@ -95,7 +95,6 @@ if __name__ == '__main__':
 EOL
 }
 
-# Database Configuration
 connectDB() {
     echo -e "${YELLOW}💾 Creating database configuration${NC}"
     cat > src/db.py << EOL
@@ -253,7 +252,6 @@ class PDFModel:
 EOL
 }
 
-# Main Application File Creation
 createControllers() {
     echo -e "${YELLOW}🚀 Creating controllers file${NC}"
     cat > src/PDFcontroller.py << EOL
@@ -332,7 +330,6 @@ createSummary() {
 EOL
 }
 
-# Comprehensive Setup Function
 setProject() {
     createStructure
     creatEnv 
@@ -347,18 +344,14 @@ setProject() {
     echo -e "${GREEN}✨ Project structure created successfully!${NC}"
 }
 
-# Main Execution
 main() {
     echo -e "${YELLOW}🔧 PDF Summary Application Initialization${NC}"
     
-    # Check for required commands
     command -v python3 >/dev/null 2>&1 || { echo >&2 "Python3 is required but not installed.  Aborting."; exit 1; }
     command -v mysql >/dev/null 2>&1 || { echo >&2 "MySQL is required but not installed.  Aborting."; exit 1; }
 
-    # Setup project
     setProject
 
-    # Create virtual environment
     python3 -m venv .venv
     source .venv/bin/activate
     pip install --upgrade pip setuptools wheel
@@ -371,16 +364,13 @@ main() {
     echo -e "${GREEN}🎉 Project is ready! Run 'source .venv/bin/activate' to start.${NC}"
 }
 
-# Run the main function
 main
 
-# Database Setup
 createDBtables() {
     echo -e "${YELLOW}💾 Creating breakitDown table${NC}"
 
     source .env
     
-    # MySQL commands to create database and table
     mysql -u root -p "$DB_PASSWORD" <<EOF
 CREATE DATABASE IF NOT EXISTS breakitDown;
 
