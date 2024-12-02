@@ -185,7 +185,7 @@ class PDFModel:
     @staticmethod
     def extract_text_from_pdf(file_path):
         try:
-            with open(file_path, 'rb') as file:  # Ensure file is opened in binary mode
+            with open(file_path, 'rb') as file: 
                 reader = PyPDF4.PdfReader(file)
                 text = ""
                 for page in reader.pages:
@@ -194,14 +194,14 @@ class PDFModel:
         except FileNotFoundError:
             print(f"Error: File not found at {file_path}")
             return None
-        except Exception as e:  # Catch other potential PDF reading errors
+        except Exception as e:  
             print(f"Error extracting text from PDF: {e}")
             return None
 
 
     @staticmethod
-    def generate_summary(text, num_sentences=3):  # Parameter for summary length
-        if text is None or not text.strip():  # Handle cases with no extracted text
+    def generate_summary(text, num_sentences=3):  
+        if text is None or not text.strip():  
             return "No text extracted from PDF."
         
         # 1. Sentence Tokenization (Improved Regex)
@@ -209,7 +209,7 @@ class PDFModel:
 
         # 2. Word Tokenization and Cleaning (Improved Regex and Stop Words)
         words = re.findall(r'\b\w+\b', text.lower())
-        stop_words = set(...) # Your existing stop words
+        stop_words = set(...) 
 
         filtered_words = [word for word in words if word not in stop_words]
 
