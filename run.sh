@@ -1,7 +1,3 @@
-#!/bin/bash
-
-# Enhanced run.sh with comprehensive project structure creation
-
 # Set colors for output
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
