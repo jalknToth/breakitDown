@@ -1,8 +1,8 @@
 # breakitDown
 
-Una aplicación web simple en Python para analizar PDF files.
+WebApp in Python to analyze PDF files.
 
-## Estructura del proyecto
+## Project Structure
 
 ```
 breakitDown/

@@ -332,7 +332,7 @@ setProject() {
     createSummary
     gitignore
 
-    echo -e "${GREEN}✨ Project structure created successfully!${NC}"
+    echo -e "${GREEN}✨ Project created successfully!${NC}"
 }
 
 main() {
